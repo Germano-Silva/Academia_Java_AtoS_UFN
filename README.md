@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://media-exp1.licdn.com/dms/image/C4E16AQH81TmvaFsXig/profile-displaybackgroundimage-shrink_200_800/0/1606726760765?e=2147483647&v=beta&t=FKRKSIKR90MriGGl4x8Cg3p5Rvg_oyXl2q5HUCt3iJI" width=70% alt="AtoS"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCSWa-uW55-eRKBZ2T51rZZpSc9kuHR4rajOyXZQB3N7mitV31oyKwYZ8q-kDq-lPprL0&usqp=CAU" alt="UFN" width=175>
+<img src="https://media-exp1.licdn.com/dms/image/C4E16AQH81TmvaFsXig/profile-displaybackgroundimage-shrink_200_800/0/1606726760765?e=2147483647&v=beta&t=FKRKSIKR90MriGGl4x8Cg3p5Rvg_oyXl2q5HUCt3iJI" width=70% alt="AtoS"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCSWa-uW55-eRKBZ2T51rZZpSc9kuHR4rajOyXZQB3N7mitV31oyKwYZ8q-kDq-lPprL0&usqp=CAU" alt="UFN" width=170>
 </h1>
 <h1 align="center"> 💻 3ª turma da Academia de Java! ☕ </h1>
  
