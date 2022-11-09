@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+      
+	<header>
+		<nav class="menu">
+		    <div class="">
+				<a href="/index" class="">Assistencias</a>
+				<a href="/assistencia" class="">Minhas Assistencia</a>
+		    </div>
+		</nav>
+	</header>
+	
+	<div th:each="assistencia : ${assistencia}" class="">
+	<h5>Detalhes do Evento</h5>
+		<div class="row">
+				<p>Codigo: <span th:text="${assistencia.codigo}"></span></p>
+                <p>Categoria: <span th:text="${assistencia.categoria}"></span></p>
+                <p>Nome: <span th:text="${assistencia.nome}"></span></p>
+                <p>Telefone: <span th:text="${assistencia.telefone}"></span></p>
+                <p>E-mail: <span th:text="${assistencia.email}"></span></p>
+                <p>Endereço: <span th:text="${assistencia.endereco}"></span></p>
+                <p>Assunto: <span th:text="${assistencia.abreviacao}"></span></p>
+                <p>Descrição: <span th:text="${assistencia.descricao}"></span></p>
+
+		</div>
+	</div>
+	
+		 <th:block th:include="mensagemValidacao"></th:block>
+		<div class="container formChat">
+		<form method="post" th:object="${chat}">
+			Nome: <input type="text" value="" name="nomeChat" placeholder="Nome Completo"/>
+			<p>Mensagem:</p><textarea type="text" name="mensagemChat" rows="4" cols="50" placeholder="Escreva a descrição do problema."></textarea>
+			
+			<button class="" type="submit">Adicionar</button>
+		</form>
+		</div>
+
+	<table class="">
+		<thead>
+			<tr>
+				<th>Nome:</th>
+				<th>Mensagem</th>
+				<th>Deletar</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="chat : ${chats}">
+				<td><span th:text="${chat.nomeChat}"></span></td>
+				<td><span th:text="${chat.mensagemChat}"></span></td>
+			</tr>
+		</tbody>
+	</table>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>
