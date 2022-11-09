@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+body {
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+table {
+    margin: 20px;
+    min-width: 700px;
+
+}
+
+table caption {
+    font-size: 2.5em;
+    font-weight: 200;
+}
+
+td {
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.td1 {
+    border: none;
+}
+
+.tabela1 {
+    display: block;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/*CORES DE FUNDO*/
+.nao_metais:hover {
+    background-color: #a1d344;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.gases_nobres:hover {
+    background-color: #3d9ee3;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.metais_alcalinos:hover {
+    background-color: #f1b200;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.metais_alcalino-terrosos:hover {
+    background-color: #eada00;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.semimetais:hover {
+    background-color: #4db6ac;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.halogenios:hover {
+    background-color: #70cbeb;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.outros_metais:hover {
+    background-color: #a2c7d3;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.metais_de_transicao:hover {
+    background-color: #eb8e8e;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.Lantanideos:hover {
+    background-color: #90e3e9;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+.Actinidios:hover {
+    background-color: #dcadd6;
+    transition: .2s;
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+div {
+    display: flex;
+}
+
+.item {
+    flex-basis: 100px;
+    padding: 10px 10px 10px 10px;
+}
+
+.item2 {
+    flex-basis: 150px;
+    padding: 10px 19px 10px 10px;
+}
+
+.item3 {
+    flex-basis: 150px;
+    padding: 10px 19px 10px 10px;
+}
+
+
+
+.element_caption {
+
+    text-align: left;
+    font-size: 13px;
+    line-height: 1;
+    -webkit-column-count: 5;
+    column-count: 5;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+    flex-basis: auto;
+    margin: 0 10px 20px;
+}
+
+.element_caption:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.element_1:before {
+    background: #a1d344;
+}
+
+.element_2:before {
+    background: #3d9ee3;
+}
+
+.element_3:before {
+    background: #f1b200;
+}
+
+.element_4:before {
+    background: #eada00;
+}
+
+.element_5:before {
+    background: #4db6ac;
+}
+
+.element_6:before {
+    background: #70cbeb;
+}
+
+.element_7:before {
+    background: #a2c7d3;
+}
+
+.element_8:before {
+    background: #eb8e8e;
+}
+
+.element_9:before {
+    background: #90e3e9;
+}
+
+.element_10:before {
+    background: #dcadd6;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
