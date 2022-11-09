@@ -1,0 +1,214 @@
+Histórico
+•API atualizada no Java8
+•Problemas anteriores
+    Inseguras com threads;
+    Mal projetadas;
+    Fuso-horário
+•Novas classes
+    LocalDate,Local Time,LocalDateTime
+    Duration,InstantePeriod
+
+
+=================================================================================
+Criação de Um Objeto LocalDate
+
+•Obter a data atual do sistema
+LocalDate hoje=LocalDate.now();
+
+•Criar um novo objeto data
+LocalDate natal=LocalDate.of(2020,12,25);
+
+•Converter de string
+LocalDate feriado=LocalDate.parse("2015-11-15");
+
+=================================================================================
+Alteração de Um Objeto LocalDate
+
+LocalDate natal=LocalDate.of(2020,12,25);
+System.out.println(natal);                                  // 2020-12-25
+System.out.println(natal.plusDays(30));                     // 2021-01-24
+System.out.println(natal.plusWeeks(2));                     // 2021-01-08
+System.out.println(natal.plusMonths(3));                    // 2021-03-25
+System.out.println(natal.plusYears(1));                     // 2021-12-25
+System.out.println(natal.plus(1,ChronoUnit.CENTURIES));     // 2120-12-25
+System.out.println(natal.minusDays(30));                    // 2020-11-25
+System.out.println(natal.minusWeeks(2));                    // 2020-12-11
+System.out.println(natal.minusMonths(3));                   // 2020-09-25
+System.out.println(natal.minus Years(1));                   // 2019-12-25
+System.out.println(natal.minus(1,ChronoUnit.DECADES));      // 2010-12-25
+
+
+=================================================================================
+Unidades de Tempo
+
+ChronoUnit.NANOS;//(1/1.000.000.000)seg
+ChronoUnit.MICROS;//(1/1.000.000)seg
+ChronoUnit.MILLIS;//(1/1.000)seg
+ChronoUnit.SECONDS;//1segundo
+ChronoUnit.MINUTES;//1minuto
+ChronoUnit.HOURS;// 1h
+ChronoUnit.HALF_DAYS;// 12h
+ChronoUnit.DAYS;//1dia
+ChronoUnit.WEEKS;//7dias
+ChronoUnit.MONTHS;//1mês
+ChronoUnit.YEARS;//1ano
+ChronoUnit.DECADES;// 10 anos
+ChronoUnit.CENTURIES;// 100 anos
+ChronoUnit.MILLENNIA;// 1.000 anos
+ChronoUnit.ERAS;// 1.000.000.000 anos
+ChronoUnit.FOREVER;// valor artificial
+
+
+=================================================================================
+Verificação de Um Objeto LocalDate
+
+LocalDate natal=LocalDate.of(2020,12,25);
+System.out.println(natal.getDayOfWeek());                     // DayOfWeek.FRIDAY
+System.out.println(natal.getDayOfMonth());                    // 25
+System.out.println(natal.getMonth());                         // Month.DECEMBER
+System.out.println(natal.getMonthValue());                    // 12
+System.out.println(natal.getYear());                          // 2020
+System.out.println(natal.getDayOf Year());                    // 360
+System.out.println(natal.getLong(ChronoField.DAY_OF_YEAR));   // 360
+LocalDate anoNovo=LocalDate.of(2021,1,1);
+System.out.println(natal.isAfter(anoNovo));                    // false
+System.out.println(natal.is Before(anoNovo));                  // true
+System.out.println(natal.is LeapYear());                       // true
+System.out.println(natal.is Equal(anoNovo));                   // false
+System.out.println(natal.compareTo(anoNovo));                  // -1
+
+
+=================================================================================
+Criação de Um Objeto LocalTime
+
+Obter a hora atual do sistema
+    LocalTime agora=LocalTime.now();
+Criar um novo objeto data
+    LocalTime porDoSol=LocalTime.of(17,36);
+Converter de string
+    LocalTime almoco=LocalTime.parse("12:00");
+
+
+
+=================================================================================
+Alteração de Um Objeto Local Time
+
+LocalTime almoco=LocalTime.of(12,0);
+System.out.println(almoco.plusNanos(200000000));
+System.out.println(almoco.plus Seconds(3600));
+System.out.println(almoco.plusMinutes(20));
+System.out.println(almoco.plusHours(2));
+System.out.println(almoco.plus(500,ChronoUnit.MILLIS));
+System.out.println(almoco.minus Nanos(300000000));
+System.out.println(almoco.minus Seconds(1800));
+System.out.println(almoco.minusMinutes(30));
+System.out.println(almoco.minusHours(3));
+System.out.println(almoco.minus(500000,ChronoUnit.MICROS));
+
+=================================================================================
+     Verificação de Um Objeto Local Time
+
+LocalTime almocando=LocalTime.parse("12:05:53.6574");
+System.out.println(almocando.getNano());// 657400000
+System.out.println(almocando.getSecond());// 53
+System.out.println(almocando.getMinute());//5
+System.out.println(almocando.getHour());// 12
+System.out.println(almocando.getLong(ChronoField.SECOND_OF_DAY));// 43553
+LocalTime porDoSol=LocalTime.of(17,36);
+System.out.println(almocando.isAfter(porDoSol));// false
+System.out.println(almocando.is Before(por DoSol));// true
+System.out.println(almocando.toSecondOfDay());// 43553
+
+
+=================================================================================
+Criação de Um Objeto LocalDateTime
+
+Obteradateehora atual do sistema
+LocalDateTime agora=LocalDateTime.now();
+
+Criar um novo objeto data
+    LocalDateTime porDoSolDeNatal =
+        LocalDateTime.of(2020,12,25,17,36);
+
+Converter de string
+LocalDateTime porDoSolDeNatal=
+   LocalDateTime.parse("2020-12-25T17:36:00");
+
+Possui todos os métodos de LocalDateede LocalTime
+    toLocalDate()etoLocalTime()
+
+
+=================================================================================
+Métodos do Objeto LocalDateTime
+
+
+LocalDateTime porDoSolDeNatal=LocalDateTime.of(2020,12,25,17,36);
+System.out.println(porDoSolDeNatal);// 2020-12-25T17:36
+System.out.println(porDoSolDeNatal.getDayOfMonth());// 25
+System.out.println(porDoSolDeNatal.plusDays(5));// 2020-12-30T17:36
+System.out.println(porDoSolDeNatal.minusMinutes(30));// 2020-12-25T17:06
+System.out.println(porDoSolDeNatal.toLocalDate().is Leap Year());// true
+System.out.println(porDoSolDeNatal.toLocal Time().toSecondOfDay());// 63360
+
+
+=================================================================================
+Formatação de DataeHora
+
+
+DateTimeFormatter dtf1=DateTimeFormatter.ofPattern("E,dd/MM/yyyy,HH:mm:ss");
+System.out.println(porDoSolDeNatal.format(dtf1)); // sex.,25/12/2020,17:36:00
+
+DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("EEEE,dd'de'MMMM'de'yyyy,'às'HH:mm");
+System.out.println(porDoSolDeNatal.format(dtf2));// sexta-feira,25 de dezembro de 2020,às 17:36
+
+
+=================================================================================
+Zoned Date Time
+
+
+LocalDateTime porDoSolDeNatal=LocalDateTime.of(2020,12,25,17,36);
+Set<String>regioes=ZoneId.getAvailableZoneIds();
+for(String regiao regioes){
+    if(regiao.contains("America")){
+        System.out.println(regiao);
+    }
+}
+System.out.format("%dregiões disponíveis.%n",regioes.size());
+ZoneId norteBR = ZoneId.of("America/Manaus");
+ZonedDateTime fusoNorteBR ZonedDateTime.of(por DoSolDeNatal,norteBR);
+System.out.println(fusoNorteBR);
+// 2020-12-25T17:36-04:00[America/Manaus]
+
+=================================================================================
+
+Intervalos de Tempo
+
+Period
+    Period pl=Period.between(dataNascimento,LocalDate.now());
+    //p1.getYears(),p1.getMonths(),p1.getDays()
+
+Duration
+    Duration d1=
+        Duration between(dataNascimento,LocalDate.now());
+        //d1.getSeconds()
+
+
+=================================================================================
+
+Ajustes Temporais
+
+LocalDate dataQualquer=LocalDate.of(2000,Month.OCTOBER,15);
+System.out.printf("Primeiro dia do mês:%s%n",
+   dataQualquer.with(Temporal Adjusters.firstDayOfMonth()));
+
+System.out.printf("Primeira segunda-feira do mês:%s%n",
+   dataQualquer.with(TemporalAdjusters.firstInMonth(DayOfWeek.MONDAY)));
+
+System.out.printf("Próxima segunda-feira do mês:%s%n",
+    dataQualquer.with(TemporalAdjusters.next(DayOfWeek.MONDAY)));
+
+System.out.printf("Último dia do mês:%s%n",
+   dataQualquer.with(TemporalAdjusters.firstDayOfNext Month()));
+
+System.out.printf("Primeiro dia do próximo ano:%s%n",
+   dataQualquer.with(TemporalAdjusters.firstDayOfNext Year()));
