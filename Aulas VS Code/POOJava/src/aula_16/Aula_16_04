@@ -1,0 +1,34 @@
+Manipulação de Argumentos de Linha de Comando
+
+Exemplo1
+public static void main(String[]args)throws Exception{
+for(Strings:args){
+System.out.println(s);
+}
+}
+
+Exemplo2
+public static void main(String[]args)throws Exception{
+if(args.length>0){
+int[]intArgs=new int[args.length];
+for(inti=0;i<intArgs.length;i++){
+try{
+=Integer.parseInt(args[i]);intArgs[i]
+System.out.format("Argumento inteiro%d=%d%n",i,intArgs[i]);
+}catch(Number Format Exceptione){
+     #1**+args[i]+deve ser um inteiro.");System.err.println("Argumento
+System.exit(1);
+}
+}
+}
+}
+
+Exercício
+Faça um programa em Java que aceite 3 argumentos de linha de
+comando,correspondentes,respectivamente, a um número inteiro, um
+operador matemático básico (+,-,x,/) e a um segundo número inteiro.
+O programa deve retornar o resultado da operação matemática
+formada pelos argumentos.
+Exemplo de uso:
+java App 1+5
+Saída: Resultado = 6
